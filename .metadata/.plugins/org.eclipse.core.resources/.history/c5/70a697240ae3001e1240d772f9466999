@@ -1,0 +1,45 @@
+package hooverville.server;
+
+import hooverville.commands.plugins.Command;
+import hooverville.commands.util.CommandController;
+import hooverville.commands.util.CommandLoader;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class Server {
+
+	public static void main(String[] args) throws IOException {
+		//load up the command api
+		CommandController cc = new CommandController();
+		//ConcurrentHashMap<String, Command> commands = new ConcurrentHashMap<String, Command>();
+		//cc.setCommandMap(commands);
+		//CommandLoader commandLoader = new CommandLoader(commands);
+		//cc.setCommandLoader(commandLoader);
+		cc.getCommandLoader().loadAllCommandsInDir(null, null);
+//		PrintWriter out = new PrintWriter(System.out);
+//		CommandHandler commandHandler = new CommandHandler(commands, out);
+		
+		//load up the server
+		ServerSocket serverSocket = null;
+		boolean listening = true;
+		ClientManager clientManager = new ClientManager();
+
+		try {
+			serverSocket = new ServerSocket(4444);
+		} catch (IOException e) {
+			System.err.println("Could not listen on port: 4444.");
+			System.exit(-1);
+		}
+
+		while (listening) {
+			new ClientConnection(serverSocket.accept(), clientManager, ccc).start();
+		}
+
+		serverSocket.close();
+	}
+	
+	
+
+}

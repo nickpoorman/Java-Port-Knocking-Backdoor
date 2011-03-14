@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_user
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_user/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_user/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_user/shared.lua
+END

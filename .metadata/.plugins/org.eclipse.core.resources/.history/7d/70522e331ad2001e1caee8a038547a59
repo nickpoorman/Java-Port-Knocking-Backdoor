@@ -1,0 +1,109 @@
+package hooverville.worlds;
+
+import hooverville.worlds.regions.NoSuchRegionException;
+import hooverville.worlds.regions.Region;
+
+public class World {
+
+	private static final int DEFAULT_SIZE = 100;
+
+	private final String name;
+	private final int maxX;
+	private final int maxY;
+	private Region[][] area;
+
+	public World(String n) {
+		this(n, DEFAULT_SIZE, DEFAULT_SIZE);
+	}
+
+	public World(String n, int initX, int initY) {
+		name = n;
+		maxX = initX;
+		maxY = initY;
+		initWorld();
+	}
+
+	public String getName() { return name; }
+	public int size() { return maxX; }
+
+	private void initWorld() {
+		area = new Region[maxX][maxY];
+	}
+
+	public void addRegionLinearly(Region r) {
+
+	}
+
+	public boolean addRegionAt(Region r, int xStart, int yStart) {
+		if (area[xStart][yStart] != null)
+			return false;
+		else {
+			area[xStart][yStart] = r;
+			return true;
+		}
+	}
+
+	public void removeAllRegionsOfType(Region r) {
+		for (int i = 0; i < maxX; ++i) {
+			for (int j = 0; j < maxY; ++j) {
+				if (area[i][j].getLocationID() == r.getLocationID())
+					area[i][j] = null;
+			}
+		}
+	}
+
+	public void removeRegionAt(Region r, int x, int y) {
+		if (area[x][y].getLocationID() == r.getLocationID())
+			area[x][y] = null;
+		else
+			throw new NoSuchRegionException("Region not found at specified location");
+	}
+	
+	public Region getRegionNorthOf(Region r) {
+		int[] indexes = getIndexes(r);
+		int x = indexes[0];
+		int y = indexes[1];
+		if (x == 0) throw new NoSuchRegionException("Northern border reached. No regions north of here");
+		return area[x-1][y];
+	}
+	
+	public Region getRegionSouthOf(Region r) {
+		int[] indexes = getIndexes(r);
+		int x = indexes[0];
+		int y = indexes[1];
+		if (x == maxX) throw new NoSuchRegionException("Southern border reached. No regions south of here");
+		return area[x+1][y];
+	}
+	
+	public Region getRegionEastOf(Region r) {
+		int[] indexes = getIndexes(r);
+		int x = indexes[0];
+		int y = indexes[1];
+		if (y == maxY) throw new NoSuchRegionException("Eastern border reached. No regions east of here");
+		return area[x][y+1];
+	}
+	
+	public Region getRegionWestOf(Region r) {
+		int[] indexes = getIndexes(r);
+		int x = indexes[0];
+		int y = indexes[1];
+		if (y == 0) throw new NoSuchRegionException("Western border reached. No regions west of here");
+		return area[x][y-1];
+	}
+	
+	private int[] getIndexes(Region r) {
+		int[] indexes = new int[2];
+		int x = 0;
+		int y = 0;
+		for (int i = 0; i < maxX; ++i) {
+			for (int j = 0; j < maxY; ++j) {
+				if (area[i][j].getLocationID() == r.getLocationID()) {
+					indexes[0] = x;
+					indexes[1] = y;
+				}
+			}
+		}
+		return indexes;
+	}
+
+}

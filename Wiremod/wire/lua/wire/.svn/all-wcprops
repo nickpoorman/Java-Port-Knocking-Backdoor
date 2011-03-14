@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svnroot/wiremod/!svn/ver/1986/trunk/wire/lua/wire
+END
+Beam_NetVars.lua
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/wire/Beam_NetVars.lua
+END
+WireShared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/wiremod/!svn/ver/1964/trunk/wire/lua/wire/WireShared.lua
+END
+WireMonitors.lua
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/wiremod/!svn/ver/1872/trunk/wire/lua/wire/WireMonitors.lua
+END
+UpdateCheck.lua
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/wiremod/!svn/ver/1910/trunk/wire/lua/wire/UpdateCheck.lua
+END
+WireGates.lua
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/wiremod/!svn/ver/1853/trunk/wire/lua/wire/WireGates.lua
+END
+opcodes.lua
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/wire/opcodes.lua
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/wiremod/!svn/ver/1911/trunk/wire/lua/entities/gmod_wire_digitalscreen
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/wiremod/!svn/ver/1832/trunk/wire/lua/entities/gmod_wire_digitalscreen/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/wiremod/!svn/ver/1911/trunk/wire/lua/entities/gmod_wire_digitalscreen/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_digitalscreen/shared.lua
+END

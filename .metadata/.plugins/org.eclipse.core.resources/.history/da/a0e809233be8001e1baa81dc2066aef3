@@ -1,0 +1,73 @@
+package hooverville.server;
+
+import hooverville.characters.HoovervilleCharacter;
+
+public class User {
+
+    private String login;    
+    private ClientConnection clientConnection;
+    private HoovervilleCharacter hoovervilleCharacter;
+    private int userID;
+
+    public User(String username, ClientConnection c) {
+        this.login = username;        
+        this.clientConnection = c;       
+    }   
+
+    /**
+     * @return the login
+     */
+    public String getLogin() {
+        return login;
+    }
+
+    /**
+     * @param login the login to set
+     */
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    /**
+     * @return the clientConnection
+     */
+    public ClientConnection getClientConnection() {
+        return clientConnection;
+    }
+
+    /**
+     * @param clientConnection the clientConnection to set
+     */
+    public void setClientConnection(ClientConnection clientConnection) {
+        this.clientConnection = clientConnection;
+    }
+
+	/**
+	 * @param userID the userID to set
+	 */
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	/**
+	 * @return the userID
+	 */
+	public int getUserID() {
+		return userID;
+	}
+
+	/**
+	 * @param hoovervilleCharacter the hoovervilleCharacter to set
+	 */
+	public void setHoovervilleCharacter(HoovervilleCharacter hoovervilleCharacter) {
+		this.hoovervilleCharacter = hoovervilleCharacter;
+	}
+
+	/**
+	 * @return the hoovervilleCharacter
+	 */
+	public HoovervilleCharacter getHoovervilleCharacter() {
+		return hoovervilleCharacter;
+	}
+
+}

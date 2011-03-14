@@ -1,0 +1,27 @@
+package plugins;
+
+import hooverville.commands.plugins.Command;
+import hooverville.commands.util.CommandController;
+import java.io.PrintWriter;
+
+public class CommandNotFound implements Command {
+
+	@Override
+	public void doAction(String input, PrintWriter out, CommandControlCenter ccc) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getCommand() {
+		// TODO Auto-generated method stub
+		return "COMMANDNOTFOUND";
+	}
+
+	@Override
+	public String getHelp() {
+		// TODO Auto-generated method stub
+		return "";
+	}
+
+}

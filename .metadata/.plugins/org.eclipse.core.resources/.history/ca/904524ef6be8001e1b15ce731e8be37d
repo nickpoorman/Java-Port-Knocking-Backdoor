@@ -1,0 +1,34 @@
+package plugins;
+
+import java.io.PrintWriter;
+
+import hooverville.commands.plugins.Command;
+import hooverville.commands.util.CommandController;
+import hooverville.server.User;
+import hooverville.characters.HoovervilleCharacter;
+
+public class Rest implements Command { 
+
+	@Override
+	public void doAction(String input, PrintWriter out, CommandController cc, User user) {
+		HoovervilleCharacter rester = user.getHoovervilleCharacter();
+		out.println("You lay down to rest... \n");
+		new hooverville.actions.solo.Rest(rester).doAction();
+		out.println("You wake up and feel rested");
+	}
+
+	@Override
+	public String getCommand() {
+		return "Rest";
+	}
+
+	@Override
+	public String getHelp() {
+		String help = "";
+		help += "Usage of the Rest Command";
+		help += "There are no available inputs for this command. All commands after rest will be ignored.";
+		help += "Same Usage: Rest";
+		return help;
+	}
+
+}

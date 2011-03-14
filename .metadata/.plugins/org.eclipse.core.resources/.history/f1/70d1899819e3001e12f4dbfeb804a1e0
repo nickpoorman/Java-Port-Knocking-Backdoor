@@ -1,0 +1,38 @@
+package hooverville.commands.filemon;
+
+import java.io.File;
+
+public abstract class FileListener implements Thread {
+
+	private File f;
+	private long lastModified;
+
+	public FileListener(File f) {
+		this.f = f;
+		lastModified = f.lastModified();
+	}
+
+	public void run() {
+		//if(f.exists())
+		try {
+			for (;;) {
+				long newLastModified = f.lastModified();
+				if (newLastModified != lastModified) {
+					lastModified = newLastModified;
+					fileChanged();					
+				}
+				Thread.sleep(1000);
+			}
+
+		} catch (InterruptedException e) {			
+			e.printStackTrace();
+		}
+	}
+	
+	public abstract void fileChanged();
+	
+	public File getFile(){
+		return f;
+	}
+
+}

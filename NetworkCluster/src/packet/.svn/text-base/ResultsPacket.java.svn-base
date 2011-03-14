@@ -1,0 +1,152 @@
+package packet;
+
+import java.io.Serializable;
+
+public class ResultsPacket implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 656030447775256788L;
+	private int rowMin;
+	private int rowMax;
+	private int columnMin;
+	private int columnMax;
+	private long[][] data;
+	private boolean sendingAllData;
+	private long[] westEdgeData;
+	private long[] eastEdgeData;
+	
+	public ResultsPacket(int rowMin, int rowMax, int columnMin, int columnMax, long[] eastEdgeData, long[] westEdgeData){		
+		this.sendingAllData = false;
+		this.rowMin = rowMin;
+		this.rowMax = rowMax;
+		this.columnMin = columnMin;
+		this.columnMax = columnMax;
+		this.westEdgeData = westEdgeData;
+		this.eastEdgeData = eastEdgeData;
+		this.data = null;
+	}
+	
+	public ResultsPacket(int rowMin, int rowMax, int columnMin, int columnMax, long[][] data){
+		this.sendingAllData = true;
+		this.rowMin = rowMin;
+		this.rowMax = rowMax;
+		this.columnMin = columnMin;
+		this.columnMax = columnMax;
+		this.data = data;		
+	}
+
+	/**
+	 * @return the rowMin
+	 */
+	public int getRowMin() {
+		return rowMin;
+	}
+
+	/**
+	 * @param rowMin the rowMin to set
+	 */
+	public void setRowMin(int rowMin) {
+		this.rowMin = rowMin;
+	}
+
+	/**
+	 * @return the rowMax
+	 */
+	public int getRowMax() {
+		return rowMax;
+	}
+
+	/**
+	 * @param rowMax the rowMax to set
+	 */
+	public void setRowMax(int rowMax) {
+		this.rowMax = rowMax;
+	}
+
+	/**
+	 * @return the columnMin
+	 */
+	public int getColumnMin() {
+		return columnMin;
+	}
+
+	/**
+	 * @param columnMin the columnMin to set
+	 */
+	public void setColumnMin(int columnMin) {
+		this.columnMin = columnMin;
+	}
+
+	/**
+	 * @return the columnMax
+	 */
+	public int getColumnMax() {
+		return columnMax;
+	}
+
+	/**
+	 * @param columnMax the columnMax to set
+	 */
+	public void setColumnMax(int columnMax) {
+		this.columnMax = columnMax;
+	}
+
+	/**
+	 * @return the data
+	 */
+	public long[][] getData() {
+		return data;
+	}
+
+	/**
+	 * @param data the data to set
+	 */
+	public void setData(long[][] data) {
+		this.data = data;
+	}
+
+	/**
+	 * @return the sendingAllData
+	 */
+	public boolean isSendingAllData() {
+		return sendingAllData;
+	}
+
+	/**
+	 * @param sendingAllData the sendingAllData to set
+	 */
+	public void setSendingAllData(boolean sendingAllData) {
+		this.sendingAllData = sendingAllData;
+	}
+
+	/**
+	 * @return the westEdgeData
+	 */
+	public long[] getWestEdgeData() {
+		return westEdgeData;
+	}
+
+	/**
+	 * @param westEdgeData the westEdgeData to set
+	 */
+	public void setWestEdgeData(long[] westEdgeData) {
+		this.westEdgeData = westEdgeData;
+	}
+
+	/**
+	 * @return the eastEdgeData
+	 */
+	public long[] getEastEdgeData() {
+		return eastEdgeData;
+	}
+
+	/**
+	 * @param eastEdgeData the eastEdgeData to set
+	 */
+	public void setEastEdgeData(long[] eastEdgeData) {
+		this.eastEdgeData = eastEdgeData;
+	}
+
+}

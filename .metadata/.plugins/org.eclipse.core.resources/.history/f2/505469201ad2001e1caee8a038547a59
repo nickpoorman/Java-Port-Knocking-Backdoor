@@ -1,0 +1,27 @@
+package hooverville.commands.command;
+
+import hooverville.commands.api.Command;
+
+import java.io.PrintWriter;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class KendallCommand implements Command {
+
+	@Override
+	public String getCommand() {		
+		return "Hello from Kendall";
+	}
+
+	@Override
+	public String getHelp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void doAction(String input, PrintWriter out, ConcurrentHashMap<String, Command> commands) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

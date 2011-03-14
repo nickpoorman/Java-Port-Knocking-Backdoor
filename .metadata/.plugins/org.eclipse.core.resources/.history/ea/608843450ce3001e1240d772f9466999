@@ -1,0 +1,28 @@
+package plugins;
+
+import java.io.PrintWriter;
+
+import hooverville.commands.api.Command;
+import hooverville.commands.application.CommandControlCenter;
+
+public class Inventory implements Command {
+
+	@Override
+	public void doAction(String input, PrintWriter out, CommandControlCenter ccc) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getCommand() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getHelp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

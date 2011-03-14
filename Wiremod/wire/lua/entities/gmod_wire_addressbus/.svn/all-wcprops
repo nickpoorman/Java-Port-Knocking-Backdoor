@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_addressbus
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_addressbus/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_addressbus/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_addressbus/shared.lua
+END

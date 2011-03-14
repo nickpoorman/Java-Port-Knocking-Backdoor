@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/outdated
+END
+clock.txt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/outdated/clock.txt
+END
+latch.txt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/outdated/latch.txt
+END
+conditional.txt
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/outdated/conditional.txt
+END
+interface.txt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/outdated/interface.txt
+END
+vehicle.txt
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/outdated/vehicle.txt
+END

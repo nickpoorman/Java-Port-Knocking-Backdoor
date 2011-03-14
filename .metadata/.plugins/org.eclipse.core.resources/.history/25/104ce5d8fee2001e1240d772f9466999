@@ -1,0 +1,149 @@
+package hooverville.client;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.io.PrintWriter;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+
+public class GameGUI extends JFrame implements ActionListener, KeyListener {
+
+	JTextArea console;
+	JTextField input;
+	BorderLayout layout;
+	JScrollPane consoleScrollPane;
+	Client client;	
+
+	public GameGUI() {
+		super("CSC490 - Game Design");
+		this.client = client;
+		initLookAndFeel();
+		int inset = 100;
+		//        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		//        setBounds(inset, inset,
+		//                screenSize.width - inset * 2,
+		//                screenSize.height - inset * 2);
+
+		Dimension newDimension = new Dimension(600, 700);
+		setBounds(inset, inset, (int) newDimension.getWidth(), (int) newDimension.getHeight());
+
+		setResizable(true);
+		Container contentPane = this.getContentPane();
+		layout = new BorderLayout();
+		getContentPane().setLayout(layout);
+		this.setPreferredSize(new Dimension(600, 700));
+		createComponents();
+		initComponents();
+		addComponents();
+	}
+	
+	public void createClient(){
+		client = new Client();
+		client.setGui(this);
+		client.start();
+	}
+	
+	public void addToScreen(String text){
+		console.append(text);
+	}
+
+	public void createComponents() {		
+		console = new JTextArea();
+		input = new JTextField();
+		consoleScrollPane = new JScrollPane(console);
+
+		console.setEditable(false);
+		input.addKeyListener(this);
+		
+		console.setText("<B>This is bold</B>");
+	}
+
+	public void addComponents() {
+		this.add(consoleScrollPane, BorderLayout.CENTER);
+		this.add(input, BorderLayout.SOUTH);
+	}
+
+	public void initComponents() {
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+
+	}
+
+	//Quit the application.
+	protected void quit() {
+		System.exit(0);
+	}
+
+	private static void createAndShowGUI() {
+		//Make sure we have nice window decorations.
+		//   JFrame.setDefaultLookAndFeelDecorated(true);
+
+		//Create and set up the window.
+		GameGUI frame = new GameGUI();
+
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		//Display the window.
+		frame.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+
+		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+
+			public void run() {
+				createAndShowGUI();
+			}
+		});
+
+	}
+
+	private static void initLookAndFeel() {		
+		try {			
+			UIManager.setLookAndFeel("org.jvnet.substance.skin.SubstanceRavenGraphiteLookAndFeel");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		int key = e.getKeyCode();
+		if (key == KeyEvent.VK_ENTER) {
+			//send the message to the server
+			if(!input.getText().equals("")){
+				sendToServer(input.getText());
+			}
+		}
+	}
+	
+	private void sendToServer(String s){
+		client.getOut().println(s);
+	}
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

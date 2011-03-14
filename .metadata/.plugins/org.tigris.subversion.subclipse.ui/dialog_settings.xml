@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="614" key="RevertDialog.location.x"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="583" key="passwordStores.size.y"/>
+	<item value="0" key="ResourceSelectionTree.mode"/>
+	<item value="1920" key="passwordStores.size.x"/>
+	<item value="23" key="RevertDialog.location.y"/>
+	<item value="0" key="CommitDialog.location.y"/>
+	<item value="454" key="CommitDialog.location.x"/>
+	<item value="C:/Users/nick/workspace/csc490" key="TreeConflictsView.resource"/>
+	<item value="181" key="passwordStores.location.y"/>
+	<item value="0" key="passwordStores.location.x"/>
+	<item value="600" key="RevertDialog.size.x"/>
+	<item value="1081" key="RevertDialog.size.y"/>
+	<item value="1163" key="CommitDialog.size.x"/>
+	<item value="973" key="CommitDialog.size.y"/>
+	<item value="true" key="TreeConflictsView.container"/>
+	<item value="209" key="TreeConflictsView.col.Resource"/>
+	<item value="1249" key="TreeConflictsView.col.Description"/>
+	<section name="CommitWizard">
+		<item value="false" key="ShowCompare"/>
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+	</section>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="https://csc375-shared-m.svn.sourceforge.net/svnroot/csc375-shared-m"/>
+		</list>
+	</section>
+</section>

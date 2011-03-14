@@ -1,0 +1,146 @@
+package hooverville.server;
+
+import hooverville.characters.CareTaker;
+import hooverville.characters.Educator;
+import hooverville.characters.Harlot;
+import hooverville.characters.Herbologist;
+import hooverville.characters.HoovervilleCharacter;
+import hooverville.characters.LightKeeper;
+import hooverville.characters.ShadowSeeker;
+import hooverville.worlds.regions.Region;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DatabaseInterface {
+
+	Connection conn;
+	private static String CONNECTION_URL = "jdbc:mysql://localhost/hooverville";
+	private static String DATABASE_USERNAME = "root";
+	private static String DATABASE_PASSWORD = "test";
+
+	public DatabaseInterface() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			conn = DriverManager.getConnection(CONNECTION_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+		} catch (ClassNotFoundException ex) {
+			System.err.println(ex.getMessage());
+		} catch (IllegalAccessException ex) {
+			System.err.println(ex.getMessage());
+		} catch (InstantiationException ex) {
+			System.err.println(ex.getMessage());
+		} catch (SQLException ex) {
+			System.err.println(ex.getMessage());
+		}
+
+	}
+
+	public HoovervilleCharacter createNewCharacter(HoovervilleCharacter hc, User user) {
+		
+//		hc.getUserName();
+//		hc.getCurrentRegion();
+//		hc.getDefense();
+//		hc.getDexterity();
+//		hc.getHealth();
+//		hc.getIntelligence();
+//		hc.getLevel();
+//		hc.getMana();
+//		hc.getPotionMakingAbility();
+//		hc.getTelepathy();
+//		hc.getType();
+		//first check if there is someone with that username
+		
+		 String query1 = "Select count(*) from users where character_name = '" + hc.getUserName() + "';";
+	        int count = 0;
+	        try {
+	        	Statement st = conn.createStatement();
+				ResultSet rs = st.executeQuery(query1);
+
+	            while (rs.next()) {
+	                count = rs.getInt("count(*)");
+	                break;
+	            }
+	            
+	            String insertQuery = "INSERT INTO users(password, character_name, character_type, health, mana, hp, mp, dex, str, intel, defense, location_x, location_y, char_level, potion_abil, telepathy)" +
+	            		" VALUES ('" + user.getPassword() + "', '" + user.getLogin() + "', '" + hc.getType() + "' , '" + fileName + "');";
+	            if (count == 0) {
+	                System.out.println(insertQuery);
+	                st.executeUpdate(insertQuery);
+	            } else {
+	                return null;
+	            }
+
+	        } catch (SQLException ex) {
+	            ex.printStackTrace();
+	        }
+		
+		
+		
+	}
+
+	public void saveCharacter(HoovervilleCharacter hc) {
+		hc.getUserName();
+		hc.getCurrentRegion();
+		hc.getDefense();
+		hc.getDexterity();
+		hc.getHealth();
+		hc.getIntelligence();
+		hc.getLevel();
+		hc.getMana();
+		hc.getPotionMakingAbility();
+		hc.getTelepathy();
+		hc.getType();
+	}
+
+	public HoovervilleCharacter getCharacter(String username, String password) {
+		//HoovervilleCharacter tmpChar = new HoovervilleCharacter("male", username);
+		//System.out.println("[OUTPUT FROM SELECT]");
+		String query = "SELECT * FROM users where character_name = '" + username + "';";
+		try {
+			Statement st = conn.createStatement();
+			ResultSet rs = st.executeQuery(query);
+			while (rs.next()) {
+				//String s = rs.getString("COF_NAME");
+				//float n = rs.getFloat("PRICE");
+				//get the type of character
+				String type = rs.getString("character_type");
+				//create the new hoovervillecharacter based on the type
+				HoovervilleCharacter hc;
+				if (type.equals("Care Taker")) {
+					hc = new CareTaker("male", username);
+				} else if (type.equals("Educator")) {
+					hc = new Educator("male", username);
+				} else if (type.equals("Harlot")) {
+					hc = new Harlot("male", username);
+				} else if (type.equals("Herbologist")) {
+					hc = new Herbologist("male", username);
+				} else if (type.equals("Light Keeper")) {
+					hc = new LightKeeper("male", username);
+				} else if (type.equals("Shadow Seeker")) {
+					hc = new ShadowSeeker("male", username);
+				}else {
+					return null;
+				}
+				//hc.setCurrentRegion(new Region());
+				hc.setDefense(rs.getInt("defense"));
+				hc.setDexterity(rs.getInt("dex"));
+				hc.setHealth(rs.getInt("health"));
+				hc.setIntelligence(rs.getInt("intel"));
+				hc.setMana(rs.getInt("mana"));
+				hc.setPotionMakingAbility(rs.getInt("potion_abil"));
+				hc.setTelepathy(rs.getInt("telepathy"));
+				//hc.setLevel();
+				return hc;
+
+			}
+		} catch (SQLException ex) {
+			System.err.println(ex.getMessage());
+		}
+
+		return null;
+	}
+
+}

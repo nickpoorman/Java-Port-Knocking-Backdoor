@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/wiremod/!svn/ver/1879/trunk/wire/lua/entities/gmod_wire_cpu
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/cl_init.lua
+END
+cpu_bus.lua
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/cpu_bus.lua
+END
+cpu_bitwise.lua
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/cpu_bitwise.lua
+END
+compiler_asm.lua
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/wiremod/!svn/ver/1879/trunk/wire/lua/entities/gmod_wire_cpu/compiler_asm.lua
+END
+cpu_interrupt.lua
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/cpu_interrupt.lua
+END
+cpu_opcodes.lua
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/cpu_opcodes.lua
+END
+cpu_vm.lua
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/cpu_vm.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/init.lua
+END
+cpu_advmath.lua
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/cpu_advmath.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_cpu/shared.lua
+END

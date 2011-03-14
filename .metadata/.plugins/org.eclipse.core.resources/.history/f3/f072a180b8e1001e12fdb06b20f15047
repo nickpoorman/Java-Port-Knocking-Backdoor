@@ -1,0 +1,40 @@
+package hooverville.commands.application;
+
+import hooverville.commands.api.Command;
+
+import java.io.PrintWriter;
+import java.util.Scanner;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		ConcurrentHashMap<String, Command> commands = new ConcurrentHashMap<String, Command>();
+		CommandLoader commandLoader = new CommandLoader(commands);
+		commandLoader.loadCommands();
+		PrintWriter out = new PrintWriter(System.out);
+		CommandHandler commandHandler = new CommandHandler(commands, out);
+//		
+//		String command = "bla";
+//		commandHandler.handleCommand(command);
+//		
+//		command = "noob";
+//		commandHandler.handleCommand(command);
+//		
+//		command = "help";
+//		commandHandler.handleCommand(command);
+//		
+		
+		Scanner sc = new Scanner(System.in);
+		String command;
+		while(!(command = sc.nextLine()).equals("quit")){
+			commandHandler.handleCommand(command);
+		}
+		
+		
+		//Now we need something that when we call a command it will grab the command from the hash map and do an action
+		//Also we need to write the help command that will grab the command when help is called on that command
+	}
+
+}

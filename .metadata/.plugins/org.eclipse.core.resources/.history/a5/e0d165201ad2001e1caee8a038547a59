@@ -1,0 +1,16 @@
+package hooverville.test;
+
+import hooverville.characters.HoovervilleCharacter;
+import hooverville.characters.LightKeeper;
+import hooverville.characters.ShadowSeeker;
+
+public class CharacterTest {
+	
+	public static void main(String[] a) {
+		HoovervilleCharacter ss = new ShadowSeeker("Male");
+		HoovervilleCharacter lk = new LightKeeper("Female");
+		System.out.println(ss.getGender());
+		System.out.println(lk.getGender());
+	}
+
+}

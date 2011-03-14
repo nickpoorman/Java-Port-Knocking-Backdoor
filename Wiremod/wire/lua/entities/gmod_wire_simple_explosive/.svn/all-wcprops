@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_simple_explosive
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_simple_explosive/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_simple_explosive/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_simple_explosive/shared.lua
+END

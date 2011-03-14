@@ -1,0 +1,55 @@
+package server;
+
+import java.net.Socket;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class ClientManager {
+
+    ConcurrentHashMap<String, User> clients;
+
+    public ClientManager() {
+        clients = new ConcurrentHashMap<String, User>();
+    }
+
+    public void addClient(String user, ClientConnection c) {
+        synchronized (clients) {
+            clients.put(user, new User(user, c));
+        }
+    }
+
+    public boolean removeClient(String user) {
+        if(!contains(user)){return false;}
+        synchronized (clients) {
+            clients.remove(user);
+            return true;
+        }
+    }
+
+    public boolean contains(String user) {
+        synchronized (clients) {
+            return clients.containsKey(user);
+        }
+    }
+
+    public Socket getClientSocket(String user) {
+        synchronized (clients) {
+            return clients.get(user).getClientConnection().getSocket();
+        }
+    }
+
+    public boolean isLoggedIn(String user) {
+        synchronized (clients) {
+            return clients.containsKey(user);
+        }
+    }
+
+    public ConcurrentHashMap<String, User> getClients() {
+        return new ConcurrentHashMap(clients);
+    }
+
+    public User getUser(String user) {
+        synchronized (clients) {
+            return clients.get(user);
+        }
+    }
+}

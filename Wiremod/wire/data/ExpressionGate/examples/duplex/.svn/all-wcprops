@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/duplex
+END
+splitter.txt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/duplex/splitter.txt
+END
+merger.txt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/duplex/merger.txt
+END
+duplexer.txt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/data/ExpressionGate/examples/duplex/duplexer.txt
+END

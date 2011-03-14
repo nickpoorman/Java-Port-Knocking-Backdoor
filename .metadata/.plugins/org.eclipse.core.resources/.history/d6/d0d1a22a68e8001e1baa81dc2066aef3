@@ -1,0 +1,34 @@
+package plugins;
+
+import java.io.PrintWriter;
+
+import hooverville.commands.plugins.Command;
+import hooverville.commands.util.CommandController;
+
+import java.io.PrintWriter;
+import java.net.URL;
+import java.security.CodeSource;
+import java.security.ProtectionDomain;
+
+public class QuickTest2222 implements Command {
+
+	@Override
+	public void doAction(String input, PrintWriter out, CommandController cc, User user) {
+		int i = 33;
+		out.println("This is quick test number " + i);
+		//this.getClass().getClassLoader().toString();
+	}
+
+	@Override
+	public String getCommand() {
+		// TODO Auto-generated method stub
+		return "test";
+	}
+
+	@Override
+	public String getHelp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

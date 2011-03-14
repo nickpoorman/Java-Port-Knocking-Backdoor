@@ -1,0 +1,7 @@
+package hooverville.worlds.regions;
+
+public final class Ruins extends Region {
+
+	public Ruins() { super(Location.Ruins); }
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 6 element(s) from project &apos;AionVoter&apos;&#x0D;&#x0A;- Original project: &apos;AionVoter&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     commons-codec-1.4.jar&#x0D;&#x0A;     commons-logging-1.1.1.jar&#x0D;&#x0A;     httpclient-4.1.jar&#x0D;&#x0A;     httpclient-cache-4.1.jar&#x0D;&#x0A;     httpcore-4.1.jar&#x0D;&#x0A;     httpmime-4.1.jar" description="Delete elements" element1="httpmime-4.1.jar" element2="commons-logging-1.1.1.jar" element3="httpclient-cache-4.1.jar" element4="commons-codec-1.4.jar" element5="httpclient-4.1.jar" element6="httpcore-4.1.jar" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="6" stamp="1296934029955" subPackages="false" version="1.0"/>
+</session>

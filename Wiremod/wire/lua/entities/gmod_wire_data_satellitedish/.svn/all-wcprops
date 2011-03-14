@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_data_satellitedish
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_data_satellitedish/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_data_satellitedish/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_data_satellitedish/shared.lua
+END

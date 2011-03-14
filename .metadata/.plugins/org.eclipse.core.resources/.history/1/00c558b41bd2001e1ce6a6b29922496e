@@ -1,0 +1,43 @@
+package hooverville.characters;
+
+import hooverville.items.Item;
+
+import java.util.List;
+
+public class Harlot extends HoovervilleCharacter {
+	
+	private static final long serialVersionUID = 1L;
+	
+	public Harlot(String gender) { super(gender); }
+
+	@Override
+	public String getDescription() {
+		return null;
+	}
+
+	@Override
+	public int getHealth() {
+		return 0;
+	}
+
+	@Override
+	public List<Item> getInventory() {
+		return null;
+	}
+
+	@Override
+	public int getLevel() {
+		return 0;
+	}
+
+	@Override
+	public int getMana() {
+		return 0;
+	}
+
+	@Override
+	public String getType() {
+		return null;
+	}
+
+}

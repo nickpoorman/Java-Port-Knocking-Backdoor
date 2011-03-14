@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/csc490/!svn/ver/158/src/hooverville/server
+END
+DatabaseInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/csc490/!svn/ver/143/src/hooverville/server/DatabaseInterface.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/csc490/!svn/ver/113/src/hooverville/server/User.java
+END
+GameProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/csc490/!svn/ver/144/src/hooverville/server/GameProtocol.java
+END
+ClientConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/csc490/!svn/ver/149/src/hooverville/server/ClientConnection.java
+END
+Server.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/csc490/!svn/ver/155/src/hooverville/server/Server.java
+END
+ClientManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/csc490/!svn/ver/113/src/hooverville/server/ClientManager.java
+END

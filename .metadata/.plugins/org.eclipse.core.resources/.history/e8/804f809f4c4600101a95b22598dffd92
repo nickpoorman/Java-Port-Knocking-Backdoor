@@ -1,0 +1,32 @@
+package server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+	
+	public static void main(String[] args) {
+		// the server will start here
+		
+		//load up the serve
+		ServerSocket serverSocket = null;
+		boolean listening = true;
+		//ClientManager clientManager = new ClientManager();
+
+		try {
+			serverSocket = new ServerSocket(31337);
+		} catch (IOException e) {
+			System.err.println("Could not listen on port: 4444.");
+			System.exit(-1);
+		}
+
+		System.out.println("Waiting for connections.");
+		while (listening) {
+			new ClientConnection(serverSocket.accept(), cc.getClientManager(), cc).start();
+		}
+
+		serverSocket.close();
+		
+	}
+
+}

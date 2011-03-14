@@ -1,0 +1,70 @@
+package hooverville.commands.application;
+
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.concurrent.ConcurrentHashMap;
+
+import nick.commands.api.Command;
+
+public class CommandHandler {
+
+	ConcurrentHashMap<String, Command> commands;
+	PrintWriter out;
+
+	public CommandHandler(ConcurrentHashMap<String, Command> commands, PrintWriter out) {
+		this.commands = commands;
+		this.out = out;
+	}
+	
+	public void handleCommand(String input) {
+		// take the first command and see if its in the hashmap
+		//String[] commandArray = input.split("[\\s]+");		
+		input = input.trim();
+		String firstCommand = getCommandArrayList(input).get(0);
+		Command command = null;
+		if ((command = commands.get(firstCommand)) != null) {
+			// then call that given commands doAction
+			command.doAction(input, out, commands);			
+		}else{
+			//print out some sort of message			
+			//right now we will print out not a valid command along with the help command
+			if ((command = commands.get("help")) != null) {
+				// then call the help commands doAction
+				command.doAction(input, out, commands);			
+			}else{
+				//shut down the program or something because the help command isn't there and thats bad
+				System.err.println("Error! The help command plugin is not loaded!");
+			}
+		}
+	}
+
+	@SuppressWarnings({ "unused", "unchecked" })
+	public static <T> T[] removeHead(T[] a) {
+		T[] tmp = (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), a.length - 1);
+		System.arraycopy(a, 1, tmp, 0, a.length - 1);
+		return tmp;
+	}
+
+	@SuppressWarnings("unused")
+	public static String aToString(String[] a) {
+		StringBuilder builder = new StringBuilder();
+		for (String s : a) {
+			builder.append(s);
+			builder.append(" ");
+		}
+		return builder.toString().trim();
+	}
+	
+	public static ArrayList<String> getCommandArrayList(String a){		
+		String[] tmp = a.split("[\\s]+");
+		ArrayList<String> newList = new ArrayList<String>(tmp.length);
+		for(String s : tmp){
+			newList.add(s);
+		}
+		return newList;
+	}
+	
+	
+
+}

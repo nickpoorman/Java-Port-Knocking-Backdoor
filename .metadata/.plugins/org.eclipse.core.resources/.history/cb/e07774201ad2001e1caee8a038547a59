@@ -1,0 +1,33 @@
+package hooverville.characters;
+
+import hooverville.items.Item;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShadowSeeker extends HoovervilleCharacter {
+	
+	private static final long serialVersionUID = HoovervilleCharacter.serialVersionUID;
+	
+	private static final String TYPE = "Shadow Seeker";
+	private int health = DEFAULT_HEALTH;
+	private int mana = DEFAULT_MANA;
+	private int level = INIT_LEVEL;
+	private List<Item> sac = new ArrayList<Item>();
+	
+	public ShadowSeeker(String gender) {
+		super(gender);
+	}
+
+	@Override
+	public String getDescription() {
+		throw new UnsupportedOperationException("Not yet implemented");
+	}
+	
+	@Override	public String getType() { return TYPE; }
+	@Override public int getHealth() { return health; }
+	@Override public int getMana() { return mana; }
+	@Override public int getLevel() { return level; }
+	@Override public List<Item> getInventory() { return sac; }
+
+}

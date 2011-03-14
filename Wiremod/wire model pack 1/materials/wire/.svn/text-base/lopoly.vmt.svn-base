@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wire/lopoly"
+	"$bumpmap" "models/wire/lopoly_normal"
+	"$surfaceprop" "Computer"
+	"$nocull" 1
+	"$translucent" 1
+}

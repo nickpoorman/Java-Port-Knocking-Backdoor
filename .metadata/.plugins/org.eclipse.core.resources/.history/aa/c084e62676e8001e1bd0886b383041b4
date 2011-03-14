@@ -1,0 +1,33 @@
+package plugins;
+
+import java.io.PrintWriter;
+
+import hooverville.commands.plugins.Command;
+import hooverville.commands.util.CommandController;
+import hooverville.server.Server;
+import hooverville.server.User;
+
+public class Say implements Command {
+
+	@Override
+	public void doAction(String input, PrintWriter out, CommandController cc, User user) {
+		// TODO Auto-generated method stub
+		//get all the people in the current region and then send them all the message
+		Region currentRegion = user.getHoovervilleCharacter().getCurrentRegion();
+		Server.sendMessageToEveryoneInRegion(cc, input.substring(4, input.length()), currentRegion);
+
+	}
+
+	@Override
+	public String getCommand() {
+		// TODO Auto-generated method stub
+		return "say";
+	}
+
+	@Override
+	public String getHelp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

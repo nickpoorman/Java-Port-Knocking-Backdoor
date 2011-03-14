@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/csc490/!svn/ver/16/src/hooverville/commands/command
+END
+KendallCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/csc490/!svn/ver/16/src/hooverville/commands/command/KendallCommand.java
+END
+CommandNotFound.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/csc490/!svn/ver/16/src/hooverville/commands/command/CommandNotFound.java
+END
+NickCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/csc490/!svn/ver/16/src/hooverville/commands/command/NickCommand.java
+END
+Help.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/csc490/!svn/ver/16/src/hooverville/commands/command/Help.java
+END

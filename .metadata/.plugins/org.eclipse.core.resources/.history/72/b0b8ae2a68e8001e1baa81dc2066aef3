@@ -1,0 +1,28 @@
+package plugins;
+
+import java.io.PrintWriter;
+
+import hooverville.commands.plugins.Command;
+import hooverville.commands.util.CommandController;
+
+public class TesterCommand implements Command {
+
+	@Override
+	public void doAction(String input, PrintWriter out, CommandController cc, User user) {
+		System.out.println("I AM NOW CHANGING THE OUTPUT");
+	}
+
+	@Override
+	public String getCommand() {
+		// TODO Auto-generated method stub
+		return "testcommand";
+	}
+
+	@Override
+	public String getHelp() {
+		// TODO Auto-generated method stub
+		return "this is the help";
+	}
+
+
+}

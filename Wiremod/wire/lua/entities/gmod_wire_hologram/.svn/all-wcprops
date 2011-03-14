@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/wiremod/!svn/ver/1965/trunk/wire/lua/entities/gmod_wire_hologram
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/wiremod/!svn/ver/1965/trunk/wire/lua/entities/gmod_wire_hologram/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_hologram/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_hologram/shared.lua
+END

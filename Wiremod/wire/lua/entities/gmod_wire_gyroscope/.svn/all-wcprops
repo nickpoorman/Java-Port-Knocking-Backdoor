@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/wiremod/!svn/ver/1799/trunk/wire/lua/entities/gmod_wire_gyroscope
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_gyroscope/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/wiremod/!svn/ver/1799/trunk/wire/lua/entities/gmod_wire_gyroscope/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_gyroscope/shared.lua
+END

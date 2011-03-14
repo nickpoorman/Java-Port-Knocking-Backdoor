@@ -1,0 +1,80 @@
+package hooverville.server;
+
+import hooverville.characters.HoovervilleCharacter;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DatabaseInterface {
+
+	Connection conn;
+	private static String CONNECTION_URL = "jdbc:mysql://localhost/coffeebreak";
+	private static String DATABASE_USERNAME = "root";
+	private static String DATABASE_PASSWORD = "test";
+
+	public DatabaseInterface() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			conn = DriverManager.getConnection(CONNECTION_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+		} catch (ClassNotFoundException ex) {
+			System.err.println(ex.getMessage());
+		} catch (IllegalAccessException ex) {
+			System.err.println(ex.getMessage());
+		} catch (InstantiationException ex) {
+			System.err.println(ex.getMessage());
+		} catch (SQLException ex) {
+			System.err.println(ex.getMessage());
+		}
+
+	}
+
+	public void createNewCharacter(User u) {
+
+	}
+
+	public void saveCharacter(User u) {
+
+	}
+
+	public HoovervilleCharacter getCharacter(String username) {
+		//HoovervilleCharacter tmpChar = new HoovervilleCharacter("male", username);
+		//System.out.println("[OUTPUT FROM SELECT]");
+		String query = "SELECT * FROM users where character_name = " + username;
+		try {
+			Statement st = conn.createStatement();
+			ResultSet rs = st.executeQuery(query);
+			while (rs.next()) {
+				//String s = rs.getString("COF_NAME");
+				//float n = rs.getFloat("PRICE");
+				//get the type of character
+				String type = rs.getString("character_type");
+				//create the new hoovervillecharacter based on the type
+				HoovervilleCharacter hc;
+				if (type.equals("CareTaker")) {
+
+				} else if (type.equals("Educator")) {
+
+				} else if (type.equals("Harlot")) {
+
+				} else if (type.equals("Herbologist")) {
+
+				} else if (type.equals("LightKeeper")) {
+
+				} else if (type.equals("ShadowSeeker")) {
+
+				}else {
+					return null;
+				}
+
+			}
+		} catch (SQLException ex) {
+			System.err.println(ex.getMessage());
+		}
+
+		return null;
+	}
+
+}

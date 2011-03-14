@@ -1,0 +1,29 @@
+package hooverville.commands.command;
+
+
+import java.io.PrintWriter;
+import java.util.concurrent.ConcurrentHashMap;
+
+import nick.commands.api.Command;
+
+public class CommandNotFound implements Command {
+
+	@Override
+	public void doAction(String input, PrintWriter out, ConcurrentHashMap<String, Command> commands) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getCommand() {
+		// TODO Auto-generated method stub
+		return "CommandNotFound";
+	}
+
+	@Override
+	public String getHelp() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

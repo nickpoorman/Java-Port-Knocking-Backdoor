@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/wiremod/!svn/ver/1952/trunk/Adv%20Duplicator/lua/entities/gmod_adv_dupe_paster
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/wiremod/!svn/ver/1795/trunk/Adv%20Duplicator/lua/entities/gmod_adv_dupe_paster/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/wiremod/!svn/ver/1952/trunk/Adv%20Duplicator/lua/entities/gmod_adv_dupe_paster/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/wiremod/!svn/ver/1795/trunk/Adv%20Duplicator/lua/entities/gmod_adv_dupe_paster/shared.lua
+END

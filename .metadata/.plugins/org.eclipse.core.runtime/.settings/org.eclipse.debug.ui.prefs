@@ -1,0 +1,10 @@
+#Mon May 03 22:47:53 EDT 2010
+DEBUG.consoleOpenOnErr=false
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+DEBUG.consoleOpenOnOut=false
+StringVariablePreferencePage=162,134,134,107,
+org.eclipse.debug.ui.cancel_launch_with_compile_errors=always
+Console.highWaterMark=88000
+preferredTargets=default\:default|
+eclipse.preferences.version=1
+org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<viewBindings>\r\n<view id\="org.eclipse.ui.console.ConsoleView">\r\n<perspective id\="org.eclipse.jdt.ui.JavaBrowsingPerspective" userAction\="opened"/>\r\n<perspective id\="org.eclipse.jdt.ui.JavaPerspective" userAction\="opened"/>\r\n</view>\r\n</viewBindings>\r\n

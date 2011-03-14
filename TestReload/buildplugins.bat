@@ -1,0 +1,1 @@
+javac -d . -classpath src plugins-src\plugins\*.java

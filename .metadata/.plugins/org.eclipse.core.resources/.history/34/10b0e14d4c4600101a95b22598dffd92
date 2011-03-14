@@ -1,0 +1,19 @@
+package client;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		String[] args = {"127.0.0.1"};
+		if (args.length != 1) {
+			System.out.println("You must enter in an ip address to connect to");
+		} else {
+			Client client = new Client(args[0]);
+			client.start();
+		}
+
+	}
+
+}

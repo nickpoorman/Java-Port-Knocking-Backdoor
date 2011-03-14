@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svnroot/csc490/!svn/ver/158/commands/plugins
+END
+InsertCast.class
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/csc490/!svn/ver/119/commands/plugins/InsertCast.class
+END
+Emote.class
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/csc490/!svn/ver/157/commands/plugins/Emote.class
+END
+To.class
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/csc490/!svn/ver/158/commands/plugins/To.class
+END
+Inventory.class
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/csc490/!svn/ver/140/commands/plugins/Inventory.class
+END
+Exit.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/133/commands/plugins/Exit.class
+END
+Home.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/140/commands/plugins/Home.class
+END
+Cast.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/145/commands/plugins/Cast.class
+END
+Wear.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/119/commands/plugins/Wear.class
+END
+Look.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/142/commands/plugins/Look.class
+END
+ReloadCommands.class
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/csc490/!svn/ver/138/commands/plugins/ReloadCommands.class
+END
+Help.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/119/commands/plugins/Help.class
+END
+Whisper.class
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/csc490/!svn/ver/158/commands/plugins/Whisper.class
+END
+Take.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/119/commands/plugins/Take.class
+END
+Use.class
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/csc490/!svn/ver/119/commands/plugins/Use.class
+END
+Go.class
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/csc490/!svn/ver/155/commands/plugins/Go.class
+END
+Attack.class
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/csc490/!svn/ver/155/commands/plugins/Attack.class
+END
+Finger.class
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/csc490/!svn/ver/145/commands/plugins/Finger.class
+END
+Say.class
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/csc490/!svn/ver/158/commands/plugins/Say.class
+END
+Out.class
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/csc490/!svn/ver/133/commands/plugins/Out.class
+END
+Target.class
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/csc490/!svn/ver/119/commands/plugins/Target.class
+END
+Motd.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/119/commands/plugins/Motd.class
+END
+Rest.class
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/csc490/!svn/ver/134/commands/plugins/Rest.class
+END

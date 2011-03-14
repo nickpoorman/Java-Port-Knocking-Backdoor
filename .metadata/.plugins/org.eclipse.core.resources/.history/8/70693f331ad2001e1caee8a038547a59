@@ -1,0 +1,49 @@
+package hooverville.characters;
+
+import hooverville.items.Item;
+
+import java.util.List;
+
+public class Educator extends HoovervilleCharacter {
+	
+	private static final long serialVersionUID = 1L;
+	
+	public Educator(String gender) { super(gender); }
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getHealth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Item> getInventory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getLevel() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getMana() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

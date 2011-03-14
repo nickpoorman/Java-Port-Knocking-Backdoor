@@ -1,0 +1,98 @@
+package hooverville.commands.application;
+
+
+import java.io.File;
+import java.io.FilenameFilter;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
+import nick.commands.api.Command;
+
+public class CommandLoader {
+
+	ConcurrentHashMap<String, Command> commands;
+
+	/**
+	 * Default constructor
+	 * 
+	 * @param  commands the {@link HashMap} where the commands will be stored
+	 */
+	public CommandLoader(ConcurrentHashMap<String, Command> commands) {
+		this.commands = commands;
+	}
+	
+	/**
+	 * loads all the commands in the given plugin folder
+	 * bin\\hooverville\\commands\\command\\
+	 */
+	public void loadCommands() {
+		// first get all the files in the plugins folder
+		File dir = new File("bin\\hooverville\\commands\\command\\");
+		// File dir = new File("command-plugins\\");
+		try {
+			System.out.println(dir.getCanonicalPath());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		File[] files = dir.listFiles(new ClassFilter());
+		// for each class it found in the plugins folder load it
+		for (File f : files) {
+			System.out.println(f.getName());
+			// first get the path of the file set correctly
+			try {
+				Class c = getCommandClass(f.getName(), dir, "hooverville.commands.command.");
+				Command com = (Command) c.newInstance();
+				// now get the command and add the object and its command to the
+				// commands map
+				commands.put(com.getCommand(), com);
+			} catch (Exception e) {
+				// this should never get run
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+	/**
+	 * Helper method to get a class from a given directory.
+	 * @param  className the name of the class to load.
+	 * @param  dir the full path to the directory.
+	 * @param  packageName the full package name.
+	 */
+	public static Class getCommandClass(String className, File dir, String packageName) {
+		if(!packageName.endsWith(".")){
+			packageName = packageName + ".";
+		}
+		className = className.substring(0, className.length() - 6);
+		URL[] theUrl = null;
+		try {
+			URI uri = dir.toURI();
+			URL url = uri.toURL();
+			theUrl = new URL[] { url };
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		Class theClass = null;
+		try {
+			ClassLoader classLoader = new URLClassLoader(theUrl);
+			theClass = classLoader.loadClass(packageName + className);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return theClass;
+	}
+}
+
+/**
+ * Inner class that only accepts .class files 
+ */
+class ClassFilter implements FilenameFilter {
+
+	public boolean accept(File dir, String name) {
+		return (name.endsWith(".class"));
+	}
+}

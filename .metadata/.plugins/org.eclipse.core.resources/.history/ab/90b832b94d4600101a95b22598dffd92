@@ -1,0 +1,61 @@
+package head;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+import project.GUI;
+import project.Tree;
+
+public class Server extends Thread {
+
+	final static int PORT = 31337;
+	final int width;
+	GUI gui;
+
+	public Server(int width, GUI gui) {
+		this.width = width;
+		this.gui = gui;
+	}
+
+	// public static void main(String[] args) throws IOException{
+	public void run() {
+		ServerSocket serverSocket = null;
+		boolean listening = true;
+		ClientManager clientManager = new ClientManager();
+		Thread tree = new Thread(new Tree(this.gui, width, (width / 4), clientManager));
+
+		try {
+
+			serverSocket = new ServerSocket(PORT);
+		} catch (IOException e) {
+			System.err.println("Could not listen on port: " + PORT);
+			System.exit(-1);
+		}
+		try {
+			System.out.println("Waiting for connections.");
+			// wait until all the clients have connected
+			int numClients = 0;
+			boolean running = false;
+			while (listening) {
+				new ClientConnection(serverSocket.accept(), clientManager).start();
+				numClients++;
+				if (!running) {
+					if (numClients == 2) {
+						running = true;
+						// listening = false;
+						// start the HeadNode
+						// HeadNode headNode = new HeadNode(clientManager);
+						// headNode.start();
+						tree.start();
+					}
+				}
+			}
+
+			serverSocket.close();
+		} catch (IOException e) {
+			System.err.println("Could not listen on port: " + PORT);
+			System.exit(-1);
+		}
+	}
+
+}

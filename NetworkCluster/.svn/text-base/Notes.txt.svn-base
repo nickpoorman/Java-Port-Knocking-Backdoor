@@ -1,0 +1,58 @@
+1. fix the nodes to use the ghost edges
+2. might only have to send back the edges after they change so (columnMax - columnMin) iteration
+
+
+
+Results of time: Send takes far longer then a receive
+
+
+It took just to send: 1797568778  ~ 80.9%
+It took jus get back: 419100105
+It took f full cycle: 2221662720
+
+It took just to send: 13577399342 ~ 84.5%
+It took jus get back: 2473804589
+It took f full cycle: 16060843053
+
+It took just to send: 900312354 ~ 95.8%
+It took jus get back: 38700930
+It took f full cycle: 939819965
+
+It took just to send: 12389658769  ~ 94.7%
+It took jus get back: 693576353
+It took f full cycle: 13084758503
+              other   1523381
+
+It took just to send: 997639879
+It took just to get back: 41326258
+It took for a full cycle: 1039659930
+It took just to send: 12783487837
+It took just to get back: 401008502
+It took for a full cycle: 13186743793
+It took just to send: 1019997104
+It took just to get back: 31750928
+It took for a full cycle: 1052474211
+It took just to send: 12169970918
+It took just to get back: 574149940
+It took for a full cycle: 12746501741
+It took just to send: 989011881
+It took just to get back: 35733235
+It took for a full cycle: 1025483759
+It took just to send: 12320597524
+It took just to get back: 583725285
+It took for a full cycle: 12906372703
+It took just to send: 1295223887
+It took just to get back: 57302155
+It took for a full cycle: 1353194199
+It took just to send: 12181858397
+It took just to get back: 572618316
+It took for a full cycle: 12756755579
+It took just to send: 944211804
+It took just to get back: 97952303
+It took for a full cycle: 1042838525
+It took just to send: 12210349207
+It took just to get back: 654191399
+It took for a full cycle: 12866638503
+It took just to send: 936604845
+It took just to get back: 31598979
+It took for a full cycle: 968939491

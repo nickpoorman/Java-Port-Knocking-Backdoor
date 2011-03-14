@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/csc490/!svn/ver/96/src/hooverville/skillsets
+END
+Defense.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/csc490/!svn/ver/38/src/hooverville/skillsets/Defense.java
+END
+Intelligence.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/csc490/!svn/ver/38/src/hooverville/skillsets/Intelligence.java
+END
+Health.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/csc490/!svn/ver/52/src/hooverville/skillsets/Health.java
+END
+PotionMakingAbility.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/csc490/!svn/ver/38/src/hooverville/skillsets/PotionMakingAbility.java
+END
+Telepathy.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/csc490/!svn/ver/38/src/hooverville/skillsets/Telepathy.java
+END
+Mana.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/csc490/!svn/ver/52/src/hooverville/skillsets/Mana.java
+END
+Dexterity.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/csc490/!svn/ver/38/src/hooverville/skillsets/Dexterity.java
+END
+Skill.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/csc490/!svn/ver/38/src/hooverville/skillsets/Skill.java
+END

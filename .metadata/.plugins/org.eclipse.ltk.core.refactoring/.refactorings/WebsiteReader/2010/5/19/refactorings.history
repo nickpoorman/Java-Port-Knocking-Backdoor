@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements(s) to &apos;SlidingWindows/src/server&apos;&#x0D;&#x0A;- Original project: &apos;WebsiteReader&apos;&#x0D;&#x0A;- Destination element: &apos;SlidingWindows/src/server&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     websitereader.PageFetcher.java&#x0D;&#x0A;     websitereader.PageFetcherManager.java" description="Copy compilation units" destination="=SlidingWindows/src&lt;server" element1="/src&lt;websitereader{PageFetcher.java" element2="/src&lt;websitereader{PageFetcherManager.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1272934396410" units="2" version="1.0"/>
+</session>

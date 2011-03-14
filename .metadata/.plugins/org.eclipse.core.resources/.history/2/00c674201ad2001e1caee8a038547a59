@@ -1,0 +1,57 @@
+package hooverville.characters;
+
+import hooverville.items.Item;
+
+import java.io.Serializable;
+import java.util.List;
+
+public abstract class HoovervilleCharacter implements Serializable {
+	
+	static final long serialVersionUID= 1L;
+	
+	protected static final int DEFAULT_HEALTH = 100;
+	protected static final int DEFAULT_MANA = 100;
+	protected static final int INIT_LEVEL = 1;
+	
+	final String sex;
+	
+	public HoovervilleCharacter(String sex) {
+		this.sex = sex;
+	}
+	
+	/**
+	 * Returns whether or not the character is male or female
+	 * 
+	 * @return gender - The gender of the character
+	 */
+	public String getGender() { return sex; }
+	
+	/**
+	 * Gives the specific type of the character being used. For example,
+	 * a character could be a Light Keeper, a Shadow Seeker, A harlot, etc.
+	 * 
+	 * @return type - The type of character being used
+	 */
+	public abstract String getType();
+	
+	/**
+	 * Gives a description of the characters current status. This could be the state of their health,
+	 * their mana, or other vitals. Also, this could entail a characters history, strengths, weaknesses, etc.
+	 * 
+	 * @return a meaningful description of the player's status
+	 */
+	public abstract String getDescription();
+	
+	public abstract int getHealth();
+	
+	public abstract int getMana();
+	
+	public abstract int getLevel();
+	
+	/**
+	 * 
+	 * @return the items the character currently posesses
+	 */
+	public abstract List<Item> getInventory();
+
+}

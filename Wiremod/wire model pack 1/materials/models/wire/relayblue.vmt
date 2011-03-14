@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wire/relayblue"
+
+	"$phong" "1" 
+	"$phongboost" "1" 
+	"$phongfresnelranges" "[ 0.2 1 1]"
+	"$phongexponent" "12"
+}

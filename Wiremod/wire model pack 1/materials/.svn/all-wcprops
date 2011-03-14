@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/wiremod/!svn/ver/1917/trunk/wire%20model%20pack%201/materials
+END
+egon_middlebeam.vmt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/egon_middlebeam.vmt
+END
+dummy_texture.vmt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/dummy_texture.vmt
+END
+tripmine_laser.vmt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/tripmine_laser.vmt
+END
+laser.vtf
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/laser.vtf
+END
+refract_ring.vtf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/refract_ring.vtf
+END
+bluredges.vtf
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/bluredges.vtf
+END
+refract_ring.vmt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/refract_ring.vmt
+END
+egon_ringbeam.vmt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/egon_ringbeam.vmt
+END
+bluredges.vmt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/bluredges.vmt
+END
+egon_refract.vtf
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/wiremod/!svn/ver/1803/trunk/wire%20model%20pack%201/materials/egon_refract.vtf
+END

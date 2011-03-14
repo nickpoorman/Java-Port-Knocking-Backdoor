@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_hologrid
+END
+cl_init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_hologrid/cl_init.lua
+END
+init.lua
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_hologrid/init.lua
+END
+shared.lua
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/wiremod/!svn/ver/1795/trunk/wire/lua/entities/gmod_wire_hologrid/shared.lua
+END

@@ -1,0 +1,8 @@
+1271552641947	Encapsulate field 'address'
+1271552655168	Encapsulate field 'port'
+1271961655103	Encapsulate field 'mode'
+1271967773832	Rename type 'ACKPacket'
+1271970421770	Rename type 'TFTP'
+1271972570423	Rename package 'TFTP'
+1271972582712	Delete element
+1271972587396	Delete element
