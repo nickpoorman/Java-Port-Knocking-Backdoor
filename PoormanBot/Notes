@@ -1,4 +1,0 @@
-I think where I left off was the CommandHandler, processing the regex. Meaning process the input command and find the Command object
-The Check pattern and call plugin need to be finished in the command controller
-
-TODO: a little check to make sure paren on the regex are not open

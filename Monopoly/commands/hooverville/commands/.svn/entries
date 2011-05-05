@@ -1,37 +1,0 @@
-10
-
-dir
-158
-https://csc490.svn.sourceforge.net/svnroot/csc490/commands/hooverville/commands
-https://csc490.svn.sourceforge.net/svnroot/csc490
-
-
-
-2009-12-14T20:37:35.412780Z
-156
-stringsyntax
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-4da455a1-6adb-4812-9956-7059ca5fdc34
-
-filemon
-dir
-
-plugins
-dir
-
-util
-dir
-

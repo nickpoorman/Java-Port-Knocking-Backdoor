@@ -1,9 +1,0 @@
-"AddonInfo"
-{
-	"name"        "Wire Model Pack 1"
-	"version"     "SVN"
-	"author_name" "Wire Team"
-	"author_url"  "http://www.wiremod.com/"
-	"info"        "Alternative models for the Wire addon."
-	"override"    "0"
-}

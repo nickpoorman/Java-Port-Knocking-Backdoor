@@ -1,298 +1,0 @@
-10
-
-dir
-1986
-https://wiremod.svn.sourceforge.net/svnroot/wiremod/trunk/wire/lua/entities
-https://wiremod.svn.sourceforge.net/svnroot/wiremod
-
-
-
-2009-12-28T21:27:34.632535Z
-1984
-tomylobo
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-7679093b-9b28-0410-9153-a78c89ece2e9
-
-base_wire_entity
-dir
-
-gmod_iballoon
-dir
-
-gmod_wire_addressbus
-dir
-
-gmod_wire_adv_input
-dir
-
-gmod_wire_adv_pod
-dir
-
-gmod_wire_button
-dir
-
-gmod_wire_cam
-dir
-
-gmod_wire_cameracontroller
-dir
-
-gmod_wire_cd_disk
-dir
-
-gmod_wire_cd_lock
-dir
-
-gmod_wire_cd_ray
-dir
-
-gmod_wire_colorer
-dir
-
-gmod_wire_consolescreen
-dir
-
-gmod_wire_cpu
-dir
-
-gmod_wire_damage_detector
-dir
-
-gmod_wire_data_satellitedish
-dir
-
-gmod_wire_data_store
-dir
-
-gmod_wire_data_transferer
-dir
-
-gmod_wire_dataplug
-dir
-
-gmod_wire_dataport
-dir
-
-gmod_wire_datarate
-dir
-
-gmod_wire_datasocket
-dir
-
-gmod_wire_detonator
-dir
-
-gmod_wire_digitalscreen
-dir
-
-gmod_wire_dual_input
-dir
-
-gmod_wire_emarker
-dir
-
-gmod_wire_explosive
-dir
-
-gmod_wire_expression
-dir
-
-gmod_wire_expression2
-dir
-
-gmod_wire_eyepod
-dir
-
-gmod_wire_forcer
-dir
-
-gmod_wire_fx_emitter
-dir
-
-gmod_wire_gate
-dir
-
-gmod_wire_gps
-dir
-
-gmod_wire_gpu
-dir
-
-gmod_wire_grabber
-dir
-
-gmod_wire_graphics_tablet
-dir
-
-gmod_wire_gyroscope
-dir
-
-gmod_wire_hdd
-dir
-
-gmod_wire_holoemitter
-dir
-
-gmod_wire_hologram
-dir
-
-gmod_wire_hologrid
-dir
-
-gmod_wire_hoverball
-dir
-
-gmod_wire_hoverdrivecontroler
-dir
-
-gmod_wire_hudindicator
-dir
-
-gmod_wire_hydraulic
-dir
-
-gmod_wire_igniter
-dir
-
-gmod_wire_indicator
-dir
-
-gmod_wire_input
-dir
-
-gmod_wire_keyboard
-dir
-
-gmod_wire_lamp
-dir
-
-gmod_wire_las_reciever
-dir
-
-gmod_wire_latch
-dir
-
-gmod_wire_light
-dir
-
-gmod_wire_locator
-dir
-
-gmod_wire_nailer
-dir
-
-gmod_wire_numpad
-dir
-
-gmod_wire_oscilloscope
-dir
-
-gmod_wire_output
-dir
-
-gmod_wire_panel
-dir
-
-gmod_wire_pixel
-dir
-
-gmod_wire_plug
-dir
-
-gmod_wire_pod
-dir
-
-gmod_wire_radio
-dir
-
-gmod_wire_ranger
-dir
-
-gmod_wire_relay
-dir
-
-gmod_wire_screen
-dir
-
-gmod_wire_sensor
-dir
-
-gmod_wire_simple_explosive
-dir
-
-gmod_wire_socket
-dir
-
-gmod_wire_soundemitter
-dir
-
-gmod_wire_spawner
-dir
-
-gmod_wire_speedometer
-dir
-
-gmod_wire_target_finder
-dir
-
-gmod_wire_textreceiver
-dir
-
-gmod_wire_textscreen
-dir
-
-gmod_wire_thruster
-dir
-
-gmod_wire_trail
-dir
-
-gmod_wire_turret
-dir
-
-gmod_wire_twoway_radio
-dir
-
-gmod_wire_user
-dir
-
-gmod_wire_value
-dir
-
-gmod_wire_vectorthruster
-dir
-
-gmod_wire_vehicle
-dir
-
-gmod_wire_watersensor
-dir
-
-gmod_wire_waypoint
-dir
-
-gmod_wire_weight
-dir
-
-gmod_wire_wheel
-dir
-
-gmod_wire_winch_controller
-dir
-
-sent_deployableballoons
-dir
-

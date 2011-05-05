@@ -1,7 +1,0 @@
-"UnlitGeneric"
-{
-        $basetexture "thrusteraddon/feather"
-		"$additive" 0
-		"$vertexcolor" 1
-		"$vertexalpha" 1
-}

@@ -1,6 +1,0 @@
-"VertexLitGeneric"
-{
-	"$baseTexture" "jaanus/wiretool/waypoint"
-	"$bumpmap" "jaanus/wiretool/waypoint_n"
-	"$Model" "1"
-}

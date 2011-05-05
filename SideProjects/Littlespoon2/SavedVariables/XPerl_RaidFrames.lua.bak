@@ -1,3 +1,0 @@
-
-XPerl_Roster = {
-}
