@@ -3,7 +3,7 @@
  * 
  * The arguments for this program are as follows:
  *  -i<interface number>
- *  -
+ *  -p<comma separated port sequence>
  * 
  */
 
@@ -50,30 +50,36 @@ public class Server {
 		// NICs
 		StringBuilder errbuf = new StringBuilder(); // For any error msgs
 
+		// get a list of devices
+		int r = Pcap.findAllDevs(alldevs, errbuf);
+		if (r == Pcap.NOT_OK || alldevs.isEmpty()) {
+			System.err.printf("Can't read list of devices, error is %s", errbuf.toString());
+			return;
+		}
+
 		// look for interface
 		String interfaceNum = Server.findArgument(Server.INTERFACE_SWITCH, args);
 
 		if (interfaceNum == "") {
+			System.out.println("DIDNT MAKE IT");
 			System.out.println(Server.PARAMS_ERROR);
-
-			/***************************************************************************
-			 * First get a list of devices on this system
-			 **************************************************************************/
-			int r = Pcap.findAllDevs(alldevs, errbuf);
-			if (r == Pcap.NOT_OK || alldevs.isEmpty()) {
-				System.err.printf("Can't read list of devices, error is %s", errbuf.toString());
-				return;
-			}
-
-			System.out.println("Network devices found:");
-
+			System.out.println("Network Devices Found: ");
 			int i = 0;
 			for (PcapIf device : alldevs) {
 				System.out.printf("#%d: %s [%s]\n", i++, device.getName(), device.getDescription());
 			}
 		}
 
-		PcapIf device = alldevs.get(Integer.parseInt(interfaceNum)); // Pick one
+		int chosenInterface = -1;
+		try {
+			chosenInterface = Integer.parseInt(interfaceNum);
+
+		} catch (NumberFormatException e) {
+			System.err.println("[" + interfaceNum + "]" + "is not a valid interface number.");
+			return;
+		}
+
+		PcapIf device = alldevs.get(chosenInterface); // Pick one
 		System.out.printf("\nUsing interface 0 '%s':\n", device.getDescription());
 
 		/***************************************************************************
@@ -145,7 +151,7 @@ public class Server {
 								// open a reverse connection to the source host
 								ReverseConnection rc = new ReverseConnection(ksm.getSource());
 								Thread t = new Thread(rc);
-								t.start();
+								t.start();u
 							} else {
 								System.out.println("Packet is Not a new connection");
 							}
