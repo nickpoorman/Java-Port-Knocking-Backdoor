@@ -23,7 +23,7 @@ public class Client {
 			
 			int port = 8090;
 			for (int i = 0; i < 4; i++) {
-				SocketAddress receiverAddress = new InetSocketAddress("192.168.1.7", port + i);
+				SocketAddress receiverAddress = new InetSocketAddress("129.3.113.68", port + i);
 				DatagramPacket packet = new DatagramPacket(buffer, buffer.length, receiverAddress);
 				
 				datagramSocket.send(packet);
