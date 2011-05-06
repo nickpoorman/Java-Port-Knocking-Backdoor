@@ -1,0 +1,1 @@
+The input streams I'm sure have problems with error checking. For example if you type exit to the server the process closes but the threads are still sending data because the socket isn't closed.
