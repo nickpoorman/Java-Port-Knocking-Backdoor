@@ -2,6 +2,7 @@ package server;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -11,19 +12,31 @@ public class KnockStateMachine {
 	private CopyOnWriteArrayList<Integer> ports;
 	private AtomicInteger attempts;
 	private final InetAddress source;
+	
+	public String getPorts(){
+		return this.ports.toString();
+	}
 
 	//private static KnockStateMachine _instance;
 
-	public KnockStateMachine(byte[] source) throws UnknownHostException {
+	public KnockStateMachine(byte[] source, List<Integer> portsList) throws UnknownHostException {
 		this.currentState = new AtomicInteger(0);
 		this.ports = new CopyOnWriteArrayList<Integer>();
 		this.attempts = new AtomicInteger(0);
 		this.source = InetAddress.getByAddress(source);
-
+		this.setPorts(portsList);
+		/*
 		this.ports.add(new Integer(8090));
 		this.ports.add(new Integer(8091));
 		this.ports.add(new Integer(8092));
 		this.ports.add(new Integer(8093));
+		*/
+	}
+	
+	public void setPorts(List<Integer> p){
+		for(Integer i : p){
+			this.ports.add(new Integer(i.intValue()));
+		}
 	}
 
 	public InetAddress getSource() {

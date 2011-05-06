@@ -26,10 +26,11 @@ import org.jnetpcap.protocol.tcpip.Udp;
 public class Server {
 
 	private static final boolean USE_FILTER = true;
-	private static final String PARAMS_ERROR = "Please use the following format for running the program: \n " + "  java Server <interface number>";
+	private static final String PARAMS_ERROR = "Please use the following format for running the program: \n " + "  java Server -i<interface number> -p<comma separated port sequence>";
 	private static final String INTERFACE_SWITCH = "-i";
+	private static final String PORT_SEQUENCE_SWITCH = "-p";
 
-	/*
+	/**
 	 * This method returns the first argument it finds that matches the supplied
 	 * switch.
 	 */
@@ -42,7 +43,33 @@ public class Server {
 		return "";
 	}
 
+	/**
+	 * Helper method to populate the port sequence list.
+	 */
+	private static void getPortSequenceList(String csvPorts, List<Integer> portsList) throws NumberFormatException {
+		String[] portsArray = csvPorts.split(",");
+		for (String s : portsArray) {
+			int port = Integer.parseInt(s);
+			portsList.add(port);
+		}
+	}
+
 	public static void main(String[] args) {
+		// first try getting the list of ports
+		String portsString = findArgument(PORT_SEQUENCE_SWITCH, args);
+		if (portsString == "") {
+			System.out.println("Port sequence must be entered.");
+			return;
+		}
+		final List<Integer> ports = new ArrayList<Integer>();
+		try {
+			getPortSequenceList(portsString, ports);
+			System.out.println("Using ports: " + ports.toString());
+		} catch (NumberFormatException e) {
+			System.out.println("Invalid port entered.");
+			return;
+		}
+
 		// I was thinking about using a properties file for this but I decided
 		// to use the command line params instead
 
@@ -144,16 +171,17 @@ public class Server {
 						int port = udp.destination();
 
 						try {
-							KnockStateMachine ksm = StateMachineManager.getInstance().addMachineIfNotExists(ip4.sourceToInt(), ip4.source());
+							KnockStateMachine ksm = StateMachineManager.getInstance().addMachineIfNotExists(ip4.sourceToInt(), ip4.source(), ports);
+							//System.out.println("Ports are: " + ksm.getPorts());
 							// now check the port on that state machine
 							if (ksm.checkAndIncState(port)) {
 								// the port sequence is complete
 								// open a reverse connection to the source host
 								ReverseConnection rc = new ReverseConnection(ksm.getSource());
 								Thread t = new Thread(rc);
-								t.start();u
+								t.start();
 							} else {
-								System.out.println("Packet is Not a new connection");
+								//System.out.println("Packet is Not a new connection");
 							}
 						} catch (UnknownHostException e) {
 							e.printStackTrace();
