@@ -1,5 +1,6 @@
 package server;
 
+import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -26,9 +27,9 @@ public class Pipe implements Runnable {
 				int len;
 				len = inputStream.read(buffer);
 				while (len != -1) {
-					System.out.println("Writing to output: " + new String(buffer));
-					outputStream.write(buffer, 0, len);
-					outputStream.flush();
+					BufferedOutputStream bos = new BufferedOutputStream(outputStream);
+					bos.write(buffer, 0, len);
+					bos.flush();
 					len = inputStream.read(buffer);
 					if (Thread.interrupted()) {
 						throw new InterruptedException();

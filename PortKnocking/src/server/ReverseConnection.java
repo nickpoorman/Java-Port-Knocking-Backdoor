@@ -55,6 +55,8 @@ public class ReverseConnection implements Runnable {
 			t.join();
 			t2.join();
 			t3.join();
+			
+			process.waitFor();
 
 			
 		} catch (IOException e) {

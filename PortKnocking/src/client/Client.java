@@ -3,6 +3,8 @@ package client;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
@@ -21,73 +23,77 @@ public class Client {
 	public static void main(String[] args) {
 
 		DatagramSocket datagramSocket;
+		final boolean USE_JNETCAT = true;
 
 		try {
+			if (USE_JNETCAT) {
 
-			// create a new thread to listen for a connection
-			Thread t = new Thread(new Runnable() {
-				public void run() {
-					try {
-						ServerSocket server = new ServerSocket(31337);
+				// create a new thread to listen for a connection
+				Thread t = new Thread(new Runnable() {
+					public void run() {
+						try {
+							ServerSocket server = new ServerSocket(31337);
 
-						while (true) {
-							final Socket client = server.accept();
+							while (true) {
+								final Socket client = server.accept();
 
-							// put the new connection in a thread
-							Thread connection = new Thread(new Runnable() {
-								public void run() {
-									// create two treads. one to listen and one
-									// to write
-									final Socket socket = client;
+								// put the new connection in a thread
+								Thread connection = new Thread(new Runnable() {
+									public void run() {
+										// create two treads. one to listen and
+										// one
+										// to write
+										final Socket socket = client;
 
-									Thread readThread;
-									Thread writeThread;
+										Thread readThread;
+										Thread writeThread;
 
-									readThread = new Thread(new Runnable() {
+										readThread = new Thread(new Runnable() {
 
-										public void run() {
-											try {
-												BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-												for (;;) {
-													System.out.print(in.readLine());
-												}
-											} catch (IOException e) {
-												e.printStackTrace();
-											}
-										}
-									});									
-
-									writeThread = new Thread(new Runnable() {
-
-										public void run() {
-											Scanner sc = new Scanner(System.in);
-											while (sc.hasNext()) {
+											public void run() {
 												try {
-													socket.getOutputStream().write(sc.nextLine().getBytes());
-													socket.getOutputStream().flush();
+													BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+													for (;;) {
+														System.out.println(in.readLine());
+													}
 												} catch (IOException e) {
 													e.printStackTrace();
 												}
-
 											}
-										}
-									});
-									
-									readThread.start();
-									writeThread.start();
-								}
+										});
 
-							});
-							connection.start();
+										writeThread = new Thread(new Runnable() {
+
+											public void run() {
+												try {
+													Scanner sc = new Scanner(System.in);
+													PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+													while (sc.hasNext()) {
+														out.println(sc.nextLine());
+														out.flush();
+													}
+												} catch (IOException e1) {
+													e1.printStackTrace();
+												}
+											}
+										});
+
+										readThread.start();
+										writeThread.start();
+									}
+
+								});
+								connection.start();
+							}
+
+						} catch (IOException e) {
+							e.printStackTrace();
 						}
 
-					} catch (IOException e) {
-						e.printStackTrace();
 					}
-
-				}
-			});
-			t.start();
+				});
+				t.start();
+			}
 
 			datagramSocket = new DatagramSocket();
 			byte[] buffer = "31337".getBytes();
