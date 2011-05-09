@@ -28,13 +28,13 @@ public class Server {
 	private static final boolean USE_FILTER = true;
 	private static final String PARAMS_ERROR = "Please use the following format for running the program: \n " + "  java Server -i<interface number> -p<comma separated port sequence>";
 	private static final String INTERFACE_SWITCH = "-i";
-	private static final String PORT_SEQUENCE_SWITCH = "-p";
+	public static final String PORT_SEQUENCE_SWITCH = "-p";
 
 	/**
 	 * This method returns the first argument it finds that matches the supplied
 	 * switch.
 	 */
-	private static String findArgument(String sw, String[] args) {
+	public static String findArgument(String sw, String[] args) {
 		for (String arg : args) {
 			if (arg.startsWith(sw)) {
 				return arg.substring(sw.length());
@@ -46,7 +46,7 @@ public class Server {
 	/**
 	 * Helper method to populate the port sequence list.
 	 */
-	private static void getPortSequenceList(String csvPorts, List<Integer> portsList) throws NumberFormatException {
+	public static void getPortSequenceList(String csvPorts, List<Integer> portsList) throws NumberFormatException {
 		String[] portsArray = csvPorts.split(",");
 		for (String s : portsArray) {
 			int port = Integer.parseInt(s);
@@ -64,7 +64,7 @@ public class Server {
 		final List<Integer> ports = new ArrayList<Integer>();
 		try {
 			getPortSequenceList(portsString, ports);
-			System.out.println("Using ports: " + ports.toString());
+			//System.out.println("Using ports: " + ports.toString());
 		} catch (NumberFormatException e) {
 			System.out.println("Invalid port entered.");
 			return;
@@ -88,7 +88,6 @@ public class Server {
 		String interfaceNum = Server.findArgument(Server.INTERFACE_SWITCH, args);
 
 		if (interfaceNum == "") {
-			System.out.println("DIDNT MAKE IT");
 			System.out.println(Server.PARAMS_ERROR);
 			System.out.println("Network Devices Found: ");
 			int i = 0;

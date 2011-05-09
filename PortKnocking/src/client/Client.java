@@ -13,14 +13,51 @@ import java.net.Socket;
 import java.net.SocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
+import server.Server;
+
 public class Client {
+	public static final String FULL_USAGE = "Use the following format to run the program: java Client -p<comma separated port sequence> -r<port number> [-l]";
+	public static final String REVERSE_PORT = "Use -r<port number> to specify a port the reverse connection should attempt to connect back on";
+	public static final String LISTEN_USAGE = "Use -l to create a listening socket to handle reverse connections";
+	public static final String PORT_SEQUENCE_USAGE = "Use -p<comma separated port sequence> to specifiy the knock sequence to send";
+	private static final String LISTEN_PORT_SWITCH = "-l";
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+
+		if (args.length < 2) {
+			System.out.println(Client.FULL_USAGE);
+			System.out.println(Client.REVERSE_PORT);
+			System.out.println(Client.LISTEN_USAGE);
+			return;
+		} else {
+			// first try getting the list of ports
+			String portsString = Server.findArgument(Server.PORT_SEQUENCE_SWITCH, args);
+			if (portsString == "") {
+				System.out.println("Port sequence must be entered.");
+				System.out.println(Client.FULL_USAGE);
+				System.out.println(Client.REVERSE_PORT);
+				System.out.println(Client.LISTEN_USAGE);
+				return;
+			}
+			final List<Integer> ports = new ArrayList<Integer>();
+			try {
+				Server.getPortSequenceList(portsString, ports);
+			} catch (NumberFormatException e) {
+				System.out.println("Invalid port entered.");
+				return;
+			}
+			
+			// then try getting the reverse port
+			String reversePort = Server.findArgument(Server.PORT_SEQUENCE_SWITCH, args);
+			
+		}
 
 		DatagramSocket datagramSocket;
 		final boolean USE_JNETCAT = true;

