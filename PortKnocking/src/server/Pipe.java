@@ -22,6 +22,8 @@ public class Pipe implements Runnable {
 	 */
 	public void run() {
 		try {
+			// this might need some tweaking later 
+			// but it works for now
 			//for (;;) {
 				byte[] buffer = new byte[1024];
 				int len;
