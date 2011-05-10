@@ -1,12 +1,3 @@
-/*
- * Nicholas Poorman 2011
- * 
- * The arguments for this program are as follows:
- *  -i<interface number>
- *  -p<comma separated port sequence>
- * 
- */
-
 package server;
 
 import java.net.UnknownHostException;
